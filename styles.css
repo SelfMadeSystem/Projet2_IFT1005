@@ -302,8 +302,7 @@ a.nav-tab__button::after {
   padding-top: 5px;
   padding-bottom: 20px;
   background-color: var(--bg-primary);
-  border: 0px solid var(--border-primary);
-  border-bottom-width: 1px;
+  overflow: hidden;
 }
 
 .spotlight-name {
@@ -378,9 +377,12 @@ a.nav-tab__button::after {
 
 footer {
   background-color: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+footer section {
   border-top: 1px solid var(--border-primary);
   padding: 40px 20px;
-  color: var(--text-secondary);
 }
 
 footer a {
@@ -440,4 +442,42 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+@media (max-width: 1000px) {
+  .footer-mdn {
+    grid-template-areas:
+      "i i i"
+      "s s s"
+      "l l l";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-mdn .intro,
+  .footer-mdn .socials {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-mdn {
+    grid-template-areas:
+      "i"
+      "s"
+      "l";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.footer-mozilla .idk {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer-mozilla .links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
 }
