@@ -136,7 +136,7 @@ a.nav-tab__button::after {
 .homepage {
   position: relative;
   padding-left: 2em;
-  padding-right: 8em;
+  padding-right: 2em;
 }
 
 .hero {
@@ -155,6 +155,7 @@ a.nav-tab__button::after {
 
 .homepage-hero {
   font-size: 24px;
+  padding-right: 6em;
 }
 
 .homepage__title {
@@ -270,8 +271,7 @@ a.nav-tab__button::after {
   line-height: 1.2em;
   max-height: 3.6em;
   overflow: hidden;
-  margin: 0;
-  margin-top: 5px;
+  margin: auto;
 }
 
 .article-summary::after {
@@ -284,4 +284,81 @@ a.nav-tab__button::after {
   width: 20ch;
   pointer-events: none;
   background: linear-gradient(to right, transparent, var(--bg-page) 80%);
+}
+
+.article-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-date {
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.spotlight {
+  margin-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  background-color: var(--bg-primary);
+  border: 0px solid var(--border-primary);
+  border-bottom-width: 1px;
+}
+
+.spotlight-name {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  text-decoration: none;
+  padding: 6px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.spotlight-name:hover {
+  text-decoration: underline;
+}
+
+.spotlight-quote {
+  position: relative;
+  color: var(--text-secondary);
+  text-wrap-style: balance;
+  font-style: italic;
+  line-height: 1.4em;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.spotlight-quote::before {
+  content: url("./img/quote.svg");
+  position: absolute;
+  left: -32px;
+  top: -6px;
+  width: 32px;
+  aspect-ratio: 1 / 1;
+  color: var(--text-primary);
+}
+
+.get-involved {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.get-involved svg {
+  fill: var(--bg-primary);
+  height: 20px;
+}
+
+.spotlight-image {
+  float: right;
+  width: 200px;
+  margin-right: -100px;
 }
