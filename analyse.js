@@ -59,11 +59,17 @@ console.log("Liens externes:", liensext);
 /*v. estimer le nombre d'éléments utilisant flexbox ou grid*/
 let compterflex = 0;
 let comptergrid = 0;
-const elements = document.querySelectorAll('*');
-elements.forEach(element => {
-    const cstyle = window.getComputedStyle(element);
-    const display = cstyle.display;
-    if (display === 'flex' || display === 'inline-flex') { compterflex++; } else if (display === 'grid' || display === 'inline-grid') { comptergrid++; }
+document.querySelectorAll('*').forEach(el => {
+  const display = getComputedStyle(el).display;  
+  switch (display) {
+    case "flex":
+    case "inline-flex":
+      compterflex++;
+      break;
+    case "grid":
+    case "inline-grid":
+      comptergrid++;
+      break;
+  }
 });
-console.log("Éléments utilisant flex:", compterflex);
-console.log("Éléments utilisant grid:", comptergrid);
+console.log(`Flexbox usados: ${compterflex}, Grids usados: ${comptergrid}`);
