@@ -72,4 +72,5 @@ document.querySelectorAll('*').forEach(el => {
       break;
   }
 });
-console.log(`Flexbox usados: ${compterflex}, Grids usados: ${comptergrid}`);
+console.log("Éléments utilisant flexbox:", compterflex);
+console.log("Éléments utilisant grid:", comptergrid);
